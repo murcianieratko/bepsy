@@ -1,0 +1,63 @@
+{
+  "paper": {
+    "title": "A Physics-Informed World Model of Coupled Immune-Stromal Oscillators Reveals Synchronization-Gated Thresholds for Inflammation-to-Malignancy Phase Transitions",
+    "supplement": "Included in the supplied PDF",
+    "locations": {
+      "dynamical_equation": "Methods 4.2, Equation 1",
+      "adaptive_coupling": "Methods 4.3",
+      "architecture": "Methods 4.3, Figure 4, Algorithm 1",
+      "training_and_splits": "Methods 4.5",
+      "hyperparameters": "Supplementary Table S5",
+      "datasets": "Methods 4.1 and Supplementary Table S2"
+    },
+    "compartments": 12,
+    "modalities": 9,
+    "seeds": [
+      42,
+      137,
+      256,
+      311,
+      487
+    ],
+    "optimizer": "AdamW",
+    "peak_learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "schedule": "cosine, 10% warmup",
+    "batch_size_subjects": 16,
+    "epochs": 200,
+    "hamiltonian_warm_start_epochs": 10,
+    "readout_interval_epochs": 20,
+    "loss_weights_methods_4_5": [
+      1.0,
+      0.3,
+      0.5,
+      0.1,
+      0.25,
+      0.4
+    ],
+    "loss_weights_table_s5": [
+      1.0,
+      0.3,
+      0.5,
+      0.001,
+      0.1,
+      1.0
+    ]
+  },
+  "engineering_prototype": {
+    "status": "PARTIALLY_VERIFIED",
+    "description": "The current trainable model is an oscillator prototype, not the six-module BEPSY model. Encoder and decoder width, fixed-step RK4, positive Lyapunov constraint, MSE loss and two-visit sampling are engineering choices. The prototype does not use the paper training schedule or report paper results.",
+    "missing": [
+      "hierarchical multiplex encoder",
+      "adaptive coupling integration",
+      "Mamba-2 dual-rate forecaster",
+      "Floquet classification",
+      "SINDyG",
+      "six-component objective",
+      "cross-archive preprocessing",
+      "paper evaluation and ablation protocols",
+      "integration of the pseudo-Hamiltonian generator into the trainable model"
+    ],
+    "data_scope": "HMP2 metagenomics is connected to the prototype. Two TCGA and three GEO series have metadata readers; TCGA STAR counts and selected GSE150115 processed genes can be read, but are not integrated into paper training."
+  }
+}

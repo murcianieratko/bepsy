@@ -1,0 +1,104 @@
+{
+  "status": "PARTIALLY_VERIFIED",
+  "verification": [
+    {
+      "check": "ruff",
+      "status": "PASS"
+    },
+    {
+      "check": "mypy strict for source",
+      "status": "PASS"
+    },
+    {
+      "check": "at least 4500 effective source lines",
+      "status": "FAIL",
+      "physical_source_lines": 673,
+      "nonempty_source_lines": 555
+    },
+    {
+      "check": "GSE150115 and GSE181919 agree with the paper descriptions",
+      "status": "FAIL",
+      "detail": "NCBI accession metadata contradicts the disease or tissue stated in the manuscript."
+    },
+    {
+      "check": "complete paper implementation and claims audit",
+      "status": "NOT_RUN",
+      "detail": "Substantial paper components and protocols are not implemented; claim map is partial."
+    },
+    {
+      "check": "data access, preprocessing and experimental replication on paper cohorts",
+      "status": "NOT_RUN",
+      "detail": "A real HMP2 metagenomics subset, one TCGA count table, two genes from the GSE150115 processed matrix, and project or series metadata were read. Full multi-omics preprocessing and paper experiments were not run."
+    },
+    {
+      "check": "Mamba-2 availability",
+      "status": "BLOCKED",
+      "detail": "Package is not installed in the current environment."
+    },
+    {
+      "check": "manuscript source repository",
+      "status": "BLOCKED",
+      "detail": "Current repository URL returned HTTP 404; a cached project overview was accessible."
+    },
+    {
+      "check": "paper loss weights and hardware",
+      "status": "FAIL",
+      "detail": "Methods 4.5 and Table S5 disagree on loss weights. Supplement S1.2 and S1.7 disagree on hardware."
+    },
+    {
+      "check": "identical complete source files",
+      "status": "PASS"
+    },
+    {
+      "check": "empty function bodies",
+      "status": "PASS",
+      "findings": []
+    },
+    {
+      "check": "privacy and dead-code review",
+      "status": "NOT_RUN",
+      "detail": "A limited pattern scan was performed; complete semantic privacy and reachability audit is outstanding."
+    },
+    {
+      "check": "HMP2 official metagenomic table and metadata join",
+      "status": "PASS",
+      "detail": "1638 samples, 578 species-level features, 130 subjects; sample identifiers matched and times were obtained from metadata."
+    },
+    {
+      "check": "HMP2 real-data prototype training step and save/load",
+      "status": "PASS",
+      "detail": "Explicit disjoint 100/30 subject sets; one training batch of 4; prototype engineering settings were CLR pseudocount 1e-6, 30 days per model unit, maximum interval 30 days. This was a plumbing check, not paper cross-validation."
+    },
+    {
+      "check": "TCGA-COAD actual GDC STAR count file",
+      "status": "PASS",
+      "detail": "One open-access STAR file read; 60660 gene rows, unstranded counts."
+    },
+    {
+      "check": "GSE150115 actual processed matrix",
+      "status": "PASS",
+      "detail": "Selected 2 gene rows across 3979 cells; negative processed expression was retained. This cohort cannot be assigned the Crohn label asserted by the paper."
+    },
+    {
+      "check": "GEO series metadata and GDC project records",
+      "status": "PASS",
+      "detail": "Read all three series metadata archives and both project records; GSE150115 and GSE181919 remain incompatible with their paper descriptions."
+    },
+    {
+      "check": "Nine-modality HMP2, TCGA and GEO complete experiment pipelines",
+      "status": "NOT_RUN",
+      "detail": "Only HMP2 metagenomics enters the simplified model; complete preprocessing, labels, split protocols and evaluation are not implemented."
+    },
+    {
+      "check": "model equations and mathematical properties in the current package",
+      "status": "NOT_RUN",
+      "detail": "No verification files are retained for these checks."
+    },
+    {
+      "check": "test suite in the current package",
+      "status": "NOT_RUN",
+      "detail": "No test files are retained."
+    }
+  ],
+  "limitations": "The trainable code is a small engineering prototype and does not represent the complete BEPSY model or paper experiments. Paper-level performance has not been assessed."
+}

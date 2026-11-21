@@ -1,0 +1,96 @@
+{
+  "status": "PARTIALLY_VERIFIED",
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "path": "THIRD_PARTY_NOTICES.txt",
+      "sha256": "d7255e519e7629bc9079dfb7e1a25fadf8ab0d2884225846f0c2b8cc741a59de",
+      "bytes": 333
+    },
+    {
+      "path": "claim_to_code.json",
+      "sha256": "43a904b5bfebab069613cedb52a0b270e496b4a17551f69aadfab9404d25de7f",
+      "bytes": 5370
+    },
+    {
+      "path": "code/bepsy/__init__.py",
+      "sha256": "e75f860a4a36ce68eaa1ee2a16e2ffcb3b946d6c1656767f9319aab1be2f77f2",
+      "bytes": 414
+    },
+    {
+      "path": "code/bepsy/cohorts.py",
+      "sha256": "bd7dc258bfaf551b8cfb720d7cdedbb27866e757d26778f32ebaa6e9e88e9611",
+      "bytes": 2460
+    },
+    {
+      "path": "code/bepsy/data.py",
+      "sha256": "7b912e66ad21712eae62c15f87bf165366f071e66ec2bbc50fbfb1e71e707307",
+      "bytes": 2921
+    },
+    {
+      "path": "code/bepsy/hamiltonian.py",
+      "sha256": "912cda14037e84546e30271ab1b432e70e1e20b7b453bd61c6d271906b162600",
+      "bytes": 2231
+    },
+    {
+      "path": "code/bepsy/hmp2.py",
+      "sha256": "14735730bcce653cee013e671e76c87812bdde0ea8996ed340c0d08ac5707676",
+      "bytes": 5606
+    },
+    {
+      "path": "code/bepsy/hmp2_pairs.py",
+      "sha256": "3c7b6bac4b15c6aa89dbaf525b1bde5b444e005dca7f1304b96e4cb471d95622",
+      "bytes": 2980
+    },
+    {
+      "path": "code/bepsy/model.py",
+      "sha256": "e239a942c8cd9adbcd34cabd411ac659916d6e514949ba35ffee6b102e725479",
+      "bytes": 1324
+    },
+    {
+      "path": "code/bepsy/oscillators.py",
+      "sha256": "51d4f8144a58c18bb786d1b8ae8dc795f5de69ea0eed582e3c568efb3059c382",
+      "bytes": 2756
+    },
+    {
+      "path": "code/bepsy/singlecell.py",
+      "sha256": "b6bb30ada61df75a06b604790f5e50a34b4e3a7cc9572fcd41c585ede2b775ed",
+      "bytes": 4457
+    },
+    {
+      "path": "code/bepsy/tcga.py",
+      "sha256": "4e64b9545dafd68eb3045640d641dea4cb09964340558ec2aca7ef1ee5972553",
+      "bytes": 1577
+    },
+    {
+      "path": "code/bepsy/training.py",
+      "sha256": "6bf8054cc98e2b874fe898ec60d9c800fdfd696ae444081b0f000e7ddeb230b4",
+      "bytes": 2106
+    },
+    {
+      "path": "code/paper_parameters.json",
+      "sha256": "939d4020db39050c5d9a853cc880fa443762a108917a22fb68bfe5ad6ea16cda",
+      "bytes": 2180
+    },
+    {
+      "path": "data_use.txt",
+      "sha256": "a195d57830d6da179969488efb115c194caffb8cd4185548a84150fe012fa315",
+      "bytes": 2437
+    },
+    {
+      "path": "dataset_urls.txt",
+      "sha256": "6d2edbf0da7f5114a775b72f42ed852216b4776153042c8c7db6d5be538eb8bb",
+      "bytes": 1073
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "d1e458aefba9513b63b09a729333a784f12a637e4125f1139bd4efc035eabc89",
+      "bytes": 319
+    },
+    {
+      "path": "verification_report.json",
+      "sha256": "6e15b924a89f85d28b708359e8e5a5a9508565a0b89de8d5e95e795e17cabae6",
+      "bytes": 4171
+    }
+  ]
+}

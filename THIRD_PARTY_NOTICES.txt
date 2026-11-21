@@ -1,0 +1,1 @@
+The oscillator equations and experimental settings are attributed in claim_to_code.json and code/paper_parameters.json. No source code from the cited public repository was copied. Python dependencies are independently distributed under their respective licenses. Dataset access and reuse are governed by the source providers' terms.

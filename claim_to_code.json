@@ -1,0 +1,117 @@
+{
+  "status": "PARTIALLY_VERIFIED",
+  "claims": [
+    {
+      "claim": "Coupled Stuart-Landau oscillators",
+      "source": "Methods 4.2, Equation 1",
+      "code": "code/bepsy/oscillators.py:stuart_landau_rhs",
+      "validation": "NOT_RUN",
+      "limitations": "The trainable prototype uses constant rather than adaptive coupling. No verification files are retained for this equation."
+    },
+    {
+      "claim": "Adaptive coupling derivative",
+      "source": "Methods 4.3",
+      "code": "code/bepsy/oscillators.py:coupling_rhs",
+      "validation": "NOT_RUN",
+      "limitations": "Derivative is implemented but not integrated into the prototype. No verification files are retained for this function."
+    },
+    {
+      "claim": "Leading cubic Hopf radial form",
+      "source": "Methods 4.3",
+      "code": "code/bepsy/oscillators.py:hopf_radial_rhs",
+      "validation": "NOT_RUN",
+      "limitations": "Higher-order terms are omitted; this function is not part of the training loss. No verification files are retained for this function."
+    },
+    {
+      "claim": "Irregular multimodal longitudinal observations",
+      "source": "Methods 4.1 and 4.2",
+      "code": "code/bepsy/hmp2.py:read_hmp2_metagenomics; code/bepsy/hmp2_pairs.py:HMP2MetagenomicPairs",
+      "validation": "PASS",
+      "limitations": "Real HMP2 metagenomic features and timing are loaded. Only one of the nine paper modalities is connected to the simplified prototype; the full multi-omics assembly remains unimplemented."
+    },
+    {
+      "claim": "Pseudo-Hamiltonian generator and dissipation",
+      "source": "Methods 4.3, Equation 2",
+      "code": "code/bepsy/hamiltonian.py:PseudoHamiltonian",
+      "validation": "NOT_RUN",
+      "limitations": "The coupling term is supplied externally because its full form is unspecified; the generator is not connected to prototype training. No verification files are retained for this function."
+    },
+    {
+      "claim": "Hierarchical multiplex encoder",
+      "source": "Methods 4.3",
+      "code": null,
+      "validation": "NOT_RUN",
+      "limitations": "Prototype encoder is an engineering default."
+    },
+    {
+      "claim": "Dual-rate Mamba-2 and cross-rate gating",
+      "source": "Methods 4.3, Table S5",
+      "code": null,
+      "validation": "NOT_RUN",
+      "limitations": "Not implemented; the required package is unavailable locally."
+    },
+    {
+      "claim": "Floquet classification and sparse equation discovery",
+      "source": "Methods 4.3, Algorithm 1",
+      "code": null,
+      "validation": "NOT_RUN",
+      "limitations": "Not implemented."
+    },
+    {
+      "claim": "Six-objective training and validation",
+      "source": "Methods 4.5, Table S5",
+      "code": null,
+      "validation": "BLOCKED",
+      "limitations": "Main text and Table S5 conflict on three loss weights; the engineering training loop implements only masked MSE."
+    },
+    {
+      "claim": "Subject/site splits and held-out flare cohort",
+      "source": "Methods 4.5",
+      "code": null,
+      "validation": "NOT_RUN",
+      "limitations": "The paper site-stratified split and flare holdout were not constructed. A disjoint subject split was used only to check the HMP2 data path."
+    },
+    {
+      "claim": "Forecasting, bifurcation and early-warning results",
+      "source": "Results 2; Methods 4.5",
+      "code": null,
+      "validation": "NOT_RUN",
+      "limitations": "No paper result was evaluated or asserted."
+    },
+    {
+      "claim": "Colorectal cancer dataset GSE181919",
+      "source": "Methods 4.1, Table S2",
+      "code": null,
+      "validation": "FAIL",
+      "limitations": "NCBI identifies the accession as head and neck cancer; the accession is not accepted for the colorectal role."
+    },
+    {
+      "claim": "GSE150115 Crohn ileum and colon cohort",
+      "source": "Methods 4.1, Table S2",
+      "code": null,
+      "validation": "FAIL",
+      "limitations": "NCBI describes the deposited single-cell samples as ulcerative colitis colon samples; the accession is not accepted for the Crohn role."
+    },
+    {
+      "claim": "TCGA molecular preprocessing",
+      "source": "Supplementary S1.2",
+      "code": "code/bepsy/tcga.py:read_star_counts; code/bepsy/cohorts.py:methylation_m_values",
+      "validation": "PASS",
+      "limitations": "One real open TCGA-COAD STAR file was read. RNA variance stabilization and full cohort assembly are not implemented; validation files for the transform functions are not retained."
+    },
+    {
+      "claim": "Single-cell quality filtering and cell-type frequencies",
+      "source": "Supplementary S1.2",
+      "code": "code/bepsy/singlecell.py:filter_and_normalize_counts; code/bepsy/singlecell.py:compartment_frequencies",
+      "validation": "NOT_RUN",
+      "limitations": "Cell labels and doublet flags must come from appropriate upstream workflows. No verification files are retained for these functions."
+    },
+    {
+      "claim": "GEO processed matrix",
+      "source": "Supplementary Table S2",
+      "code": "code/bepsy/singlecell.py:read_geo_processed_csv",
+      "validation": "PASS",
+      "limitations": "Two selected genes from the actual GSE150115 processed matrix were loaded; processed values can be negative and are not raw counts. The accession is ulcerative colitis rather than the paper-assigned Crohn cohort."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+HMP2 metagenomic samples
+
+Obtain the two HMP2 files listed in dataset_urls.txt. read_hmp2_metagenomics(metadata_path, profile_path) reads the official CSV and gzipped taxonomic table, joins samples by their original identifier, selects species-level features, and retains subject, site, disease, and sampling week. by_subject returns times in days and feature vectors. centered_log_ratio requires an explicitly selected positive pseudocount; the paper does not specify this value.
+
+HMP2MetagenomicPairs requires an explicit set of training subjects, a pseudocount, the number of days per model time unit, and a maximum pair interval. assert_subject_disjoint checks user-supplied partitions. The paper's flare holdout and site-stratified cross-validation require cohort annotations and have not been constructed here. model_for_metagenomic_prototype connects species features to the existing simplified trainable oscillator. This prototype represents only metagenomics and is not the paper's complete nine-modality model.
+
+TCGA
+
+read_gdc_project verifies a downloaded project response. read_star_counts reads an official GDC STAR count table with an explicitly selected strand column. methylation_m_values and copy_number_log_ratio provide the mathematical transforms for numerical arrays; clipping and reference arrays must be specified explicitly and the reference must be determined from the training partition. RNA variance stabilization and the complete TCGA data assembly are not implemented.
+
+GEO
+
+read_geo_soft verifies the actual accession, series title, and sample listing. filter_and_normalize_counts requires raw counts, mitochondrial-gene flags, doublet flags, and an explicit normalization target; it rejects cells with at least 20 percent mitochondrial counts. compartment_frequencies uses existing cell annotations and never invents them. read_geo_processed_csv streams selected genes from a processed gene-by-cell CSV and preserves negative values; it does not treat processed values as raw counts. Loading full raw count matrices, doublet detection, reference mapping, and pseudotime are not implemented.
+
+GSE150115 describes five ulcerative colitis samples, not the paper's Crohn cohort. GSE181919 is head and neck cancer, not colorectal cancer. require_paper_compatible refuses both for their paper-assigned roles. GSE116222 is epithelial-focused; its metadata alone cannot establish immune and stromal cell coverage.

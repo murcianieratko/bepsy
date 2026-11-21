@@ -1,0 +1,9 @@
+HMP2 official results: https://www.ibdmdb.org/results
+HMP2 metadata: https://g-227ca.190ebd.75bc.data.globus.org/ibdmdb/metadata/hmp2_metadata_2018-08-20.csv
+HMP2 metagenomic taxonomic profiles: https://g-227ca.190ebd.75bc.data.globus.org/ibdmdb/products/HMP2/MGX/2018-05-04/taxonomic_profiles_3.tsv.gz
+TCGA colon adenocarcinoma project metadata: https://api.gdc.cancer.gov/projects/TCGA-COAD
+TCGA rectal adenocarcinoma project metadata: https://api.gdc.cancer.gov/projects/TCGA-READ
+GSE116222 colon epithelial single-cell series metadata: https://ftp.ncbi.nlm.nih.gov/geo/series/GSE116nnn/GSE116222/soft/GSE116222_family.soft.gz
+GSE150115 ulcerative colitis colon series metadata: https://ftp.ncbi.nlm.nih.gov/geo/series/GSE150nnn/GSE150115/soft/GSE150115_family.soft.gz
+GSE181919 head and neck cancer series metadata: https://ftp.ncbi.nlm.nih.gov/geo/series/GSE181nnn/GSE181919/soft/GSE181919_family.soft.gz
+GSE150115 processed ulcerative colitis expression matrix: https://ftp.ncbi.nlm.nih.gov/geo/series/GSE150nnn/GSE150115/suppl/GSE150115_Processed_Data_Matrix.csv.gz
